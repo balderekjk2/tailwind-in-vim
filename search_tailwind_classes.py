@@ -8,7 +8,7 @@ def search_tailwind_classes(search_query, num_matches, match_position):
 
     :param search_query: The string to search for in class names.
     :param num_matches: The maximum number of matches to return.
-    :param match_position: The string indicated match position ('s, 'e', 'any').
+    :param match_position: The string indicated match position ('s, 'e', 'any', 'x').
     """
     try:
         # Connect to the database
@@ -22,6 +22,8 @@ def search_tailwind_classes(search_query, num_matches, match_position):
           search_query = f"{search_query}%"
         elif match_position == 'e':
           search_query = f"%{search_query}"
+        elif match_position == 'x':
+          pass
         limit_clause = "" if num_matches == 0 else f"LIMIT {num_matches}"
         query = f"SELECT class_name FROM tailwind_classes WHERE class_name LIKE ? {limit_clause};"
         cursor.execute(query, (search_query,))
@@ -78,9 +80,9 @@ python twsearch.py "flex" 0 s
         "match_position",
         type=str,
         nargs="?",
-        choices=["s", "e", "any"],
+        choices=["s", "e", "any", "x"],
         default="any",
-        help="match from: \"s\" (start), \"e\" (end), \"any\" (anywhere)",
+        help="match position: \"s\" (start), \"e\" (end), \"any\" (anywhere), \"x\" (exact)",
     )
 
     # Parse arguments
