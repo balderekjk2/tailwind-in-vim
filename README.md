@@ -24,7 +24,7 @@
 ## Post-setup usage
 
 ```console
-usage: search_tailwind_classes.py [-h] [search_query] [num_matches] [{s,e,any}]
+usage: search_tailwind_classes.py [-h] [search_query] [num_matches] [{s,e,any,x}]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Search Tailwind class names in an SQLite database
@@ -33,7 +33,7 @@ Search Tailwind class names in an SQLite database
 positional arguments:
   search_query  search query string (default: empty string)
   num_matches   max number of matches to return (default: 10)
-  {s,e,any}     match from: "s" (start), "e" (end), "any" (anywhere)
+  {s,e,any,x}   match position: "s" (start), "e" (end), "any" (anywhere), "x" (exact)
 
 optional arguments:
   -h, --help    show this help message and exit
@@ -48,4 +48,4 @@ python twsearch.py "flex" 0 s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
-To see the help screen any time run `python search_tailwind_classes.py -h` or in vim `:Twref -h`
+To see the help screen, in this directory run `python search_tailwind_classes.py -h` or in vim `:Twref -h`
