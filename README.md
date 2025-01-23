@@ -2,9 +2,9 @@
 
 ## Preliminary assumptions
 
-1. You have Python 3 installed on your system. See official downloads [here](https://www.python.org/downloads/).
+1. You have Python 3.2 or higher installed on your system. See official downloads [here](https://www.python.org/downloads/).
    - In a shell type `python --version`
-   - If you see `Python 3.x.x`, you have Python 3 installed
+   - If you see `Python 3.x.x`, you have Python 3 installed. The second number should be 2 or higher.
 2. You have vim installed.
 
 ## Getting started
@@ -18,7 +18,7 @@
    ```
 
    You will only ever need to run this one time, so feel free to (re)move these scripts after execution.
-4. Open up vim and type :Twref
+4. Open up vim and type `:Twref`
    - You should see `aspect-auto, aspect-video, aspect-square, container, mx-auto, max-width, min-width, columns-1, columns-2, columns-3^@`
 
 ## Post-setup usage
