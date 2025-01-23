@@ -2,7 +2,10 @@
 
 ## Preliminary assumptions
 
-1. You have Python installed on your system. See official downloads [here](https://www.python.org/downloads/).
+1. You have Python 3 installed on your system. See official downloads [here](https://www.python.org/downloads/).
+   - In a shell type `python --version`
+   - If you see `Python 3.x.x`, you have Python 3 installed
+2. You have vim installed.
 
 ## Getting started
 
